@@ -28,7 +28,7 @@ h3{
 /* ------------------ BANNER PRINCIPAL ------------------ */
 
 .banner-principal{
-    background-image: url(Imagenes/Fondo1.jpg);
+    background-image: url(Fondo1.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -106,7 +106,7 @@ h3{
     width: 100%;
     padding: 80px 20px;
 
-    background-image: url(Imagenes/Fondo2.jpg);
+    background-image: url(Fondo2.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -285,3 +285,4 @@ h3{
   }
 
 }
+
