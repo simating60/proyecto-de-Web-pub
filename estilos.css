@@ -1,0 +1,287 @@
+*{ 
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+a{
+    color: blue;
+}
+a:hover{
+    color: darkmagenta;
+}
+
+h2{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+h3{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ------------------ BANNER PRINCIPAL ------------------ */
+
+.banner-principal{
+    background-image: url(Imagenes/Fondo1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    padding: 80px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.barrasuperior{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 20px;
+}
+
+.menu-icono{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.menu-icono img{
+    width: 35px;
+    height: auto;
+}
+
+.logo img{
+    width: 80px;
+}
+
+.menu-escritorio{
+    display: none;
+}
+
+.bannercontenido{
+    color: beige;
+    text-align: center;
+}
+    
+/* ------------------ COLUMNAS ROJA / BEIGE ------------------ */
+
+.columna{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.rojo{
+    background-color: #e74c3c;
+    color: #ded6c0;
+}
+
+.beige{
+    background-color: #ded6c0;
+    color: #e74c3c;
+}
+
+/* ------------------ BANNER 2 ------------------ */
+
+.banner2principal{
+    width: 100%;
+    padding: 80px 20px;
+
+    background-image: url(Imagenes/Fondo2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.banner2{
+    color: beige;
+    text-align: center;
+}
+
+.boton-banner{
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-weight: 600;
+}
+
+/* ------------------ BANNER 3 ------------------ */
+
+.banner3principal{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.columna-banner3{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cuadrado{
+    background-color: white;
+    color: black;
+    padding: 20px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    min-height: 150px;
+}
+
+.cuadrado img{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.texto-columna{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.texto-columna p{
+    margin: 0;
+}
+
+/* ------------------ FOOTER ------------------ */
+
+.banner-final{
+    background-color: black;
+    color: white;
+    padding: 100px 30px 20px 30px;
+    font-size: 12px;
+        }
+
+
+/* ========================================================= */
+/* ================== RESPONSIVE =========================== */
+/* ========================================================= */
+
+/* 🔹 A partir de 900px → columnas más cortas */
+
+@media screen and (min-width: 900px){
+
+  .columna{
+      min-height: 350px;
+      padding: 80px 60px;
+      aspect-ratio: auto;
+  }
+
+}
+
+/* 🔹 A partir de 1000px → layout escritorio */
+
+@media screen and (min-width: 1000px){
+
+  /* Menú escritorio */
+  .menu-icono{
+      display: none;
+  }
+
+  .menu-escritorio{
+      display: flex;
+      gap: 30px;
+  }
+
+  .menu-escritorio a{
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+  }
+
+  .logo img{
+      width: 200px;
+  }
+
+  .banner-principal{
+      height: 96vh;
+  }
+
+  .contenedorcolumnas{
+      display: flex;
+  }
+
+  .columna{
+      width: 50%;
+      min-height: 60vh;   /* 🔥 más alta que en 900px */
+      padding: 100px 80px; /* un poco más de aire */
+  }
+
+  .banner2principal{
+      height: 90vh;
+  }
+
+  .boton-banner{
+      padding: 15px 35px;
+      font-size: 18px;
+  }
+
+  /* 🔹 Banner 3 en tabla 2x2 */
+  .banner3principal{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 40px;
+  }
+
+  .columna-banner3{
+      gap: 40px;
+  }
+
+  .cuadrado{
+      flex-direction: row;
+      align-items: center;
+      text-align: left;
+      gap: 25px;
+  }
+
+  .cuadrado img{
+      width: 160px;
+      height: 160px;
+      flex-shrink: 0;
+  }
+
+  .texto-columna{
+      align-items: flex-start;
+      flex: 1;
+  }
+
+}
